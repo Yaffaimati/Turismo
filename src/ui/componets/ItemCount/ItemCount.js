@@ -1,25 +1,27 @@
+import React, { useState } from 'react'
 
-import { useState} from "react"
+function ItemCount({stock}) {
+    
+    const [count, setCount] = useState(0)
+    
+    function adding  ()  {
+        if(count < stock) {
+            setCount(count + 1)
+        }
+    }
 
-const ItemCount = ({stock, initial,onAdd}) =>{
-    
-    const [ contador, setContador] =useState(initial)
-    
-    const aumentarContador =  () => {
-        setContador(contador + 1)   } 
-    
-    const bajarContador =  () => {
-            setContador(contador - 1)  }
-    
-    const confirmarContador = () => { }
-
-    return(
-        <div>
-            <p>El contador va :{contador}</p>
-            <button onClick={aumentarContador}>Aumentar</button>
-            <button onClick={bajarContador}>Disminuir</button>
-            <button onClick={confirmarContador}>Confirmar</button>
-        </div>
-         )
+    function subs () {
+        if(count > 0) {
+            setCount(count - 1)
+        }
+    }
+  return (
+    <div>
+        <button onClick={subs}>-</button>
+        <span>{count}</span>
+        <button onClick={adding}>+</button>
+    </div>
+  )
 }
+
 export default ItemCount
