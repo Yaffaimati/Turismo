@@ -1,27 +1,27 @@
 import React, { useState } from 'react'
 
-function ItemCount({stock}) {
-    
-    const [count, setCount] = useState(0)
-    
-    function adding  ()  {
-        if(count < stock) {
-            setCount(count + 1)
-        }
-    }
+const ItemCount = ({ initial, stock }) => {
+    const [count, setCount] = useState(initial);
 
-    function subs () {
-        if(count > 0) {
-            setCount(count - 1)
-        }
-    }
-  return (
-    <div>
-        <button onClick={subs}>-</button>
-        <span>{count}</span>
-        <button onClick={adding}>+</button>
-    </div>
-  )
-}
+    const add = () => {
+        stock !== count && setCount(count + 1);
+    };
 
-export default ItemCount
+    const substract = () => {
+        initial !== count && setCount(count - 1);
+    };
+    return (
+        <div className="count">
+            <div className="buttons">
+                <button onClick={add}>+</button>
+                <p>{count}</p>
+                <button onClick={substract}>-</button>
+            </div>
+            <div className="add-cart">
+                <button>Add to Cart!</button>
+            </div>
+        </div>
+    );
+};
+
+export default ItemCount;
