@@ -1,45 +1,47 @@
-const productos = [
+export const productos = [
     {
         id: 1,
         name: 'Villa General Belgrano',
-        precio: 5000,
-        descripcion: 'Ciudad de arquitectura Bavara',
-        image: '../img/vgb.jpg',
-        stock: 3
+        price: 5000,
+        stock: 3,
+        imag: "../img/vgb.png",
+        category:"localidades",
+        description: 'Ciudad de arquitectura Bavara',
     },
     {
         id: 2,
         name: 'Santa Rosa',
-        precio: 4000,
-        descripcion: 'Ciudad entre rios y montañas',
-        image: "../img/santa.jpg",
-        stock: 5
+        prece: 4000,
+        stock: 5,
+        imag: "../img/santa.png",
+        category:"localidades",
+        description: 'Ciudad entre rios y montañas',
+        
+        
     },
     {
         id: 3,
         name: 'Los Reartes',
-        precio: 3000,
-        descripcion: 'Pueblo historico serrano',
-        image: "../img/images.jpg",
-        stock: 3
+        price: 3000,
+        stock: 3,
+        category:"localidades",
+        imag: "../img/losreartes.png",
+        description: 'Pueblo historico serrano',
+    },
+    {
+        id: 4,
+        name: 'La Cumbrecita',
+        price: 7000,
+        stock: 8,
+        imag: "../img/cumbrecita.png",
+        category:"localidades",
+        description: 'Pueblo peatonal',
+        
+        
     }
 ]
 
 
 
 
-export const traerProductos = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(productos);
-        }, 1000);
-    });
-};
 
-export const traerProducto = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(productos);
-        }, 1000);
-    });
-};

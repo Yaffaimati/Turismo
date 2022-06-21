@@ -1,18 +1,12 @@
-import React from 'react';
+import { Link } from "react-router-dom"
 
-const CartWidget = (props) => {
-
-    return (
-       <header> <nav>
-             <div className="shop">
-           
-            <p>4</p>
-        </div>
-             <span className = "material-symbols-outlined"> shopping_cart </span>  
-        </nav>
-    </header>)
+const CartWidget = () => {
+  return (
+    <div>
+      <h1>CartWidget</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto impedit sint minima cum minus? Numquam deleniti facilis, officiis perferendis quis sed voluptas nisi ipsa, magni, temporibus odio a commodi maiores!</p>
+      <Link to="/checkout">Proceder con la compra</Link>
+    </div>
+  )
 }
-export default CartWidget 
-
-/* import { AiOutlineShoppingCart } from 'react-icons/ai'; 
- <AiOutlineShoppingCart color="white" size={25} /> */
+export default CartWidget

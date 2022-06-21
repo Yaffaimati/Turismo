@@ -1,17 +1,21 @@
 
 import Main from "../main/Main.js"
-import NavBars from "../navbar/NavBars.js"
+import Header from "../header/Header.js"
+import Footer from "../footer/footer.js"
 
+import { BrowserRouter, useNavigate } from "react-router-dom"
 
 const App = () => {
-    return ( 
-    <>
-    
-    <NavBars/>
-    <Main/>
-    
-    </>
-    )
+
+  return (
+    <BrowserRouter>
+      <Header />
+      <Main />
+      <Footer />
+    </BrowserRouter>
+  )
 }
 
 export default App
+
+
