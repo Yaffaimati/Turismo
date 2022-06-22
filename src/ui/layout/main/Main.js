@@ -1,8 +1,8 @@
 
 import ItemListContainer from "../../componets/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "../../componets/ItemDetailContainer/ItemDetailContainer"
-import CartWidget from "../../CartWidget/CartWidget.js"
-import Checkout from "../../Checkout/Checkout.js"
+import CartWidget from "../../componets/CartWidget/CartWidget"
+import Checkout from "../../componets/Checkout/Checkout"
 import {Routes,Route} from "react-router-dom"
 
 const Main = () => {

@@ -1,17 +1,10 @@
- import React from 'react';
- import ReactDOM from 'react-dom/client';
- import App from './ui/layout/app/App.js';
- import "../ui/layout/app/estilo.css"
- import 'react-loading-skeleton/dist/skeleton.css'
-
- import 'bootstrap/dist/css/bootstrap.min.css';
- 
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from "../src/ui/layout/app/App"
+import "../src/assets/scss/estilo.css"
+import 'react-loading-skeleton/dist/skeleton.css'
 
 
- const root = ReactDOM.createRoot(document.getElementById('root'));
- root.render(
-     <React.StrictMode>
-         <App />
-     </React.StrictMode>
- );
- reportWebVitals();
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(<App/>);

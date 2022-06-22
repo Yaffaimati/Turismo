@@ -1,45 +1,42 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import ItemList from "../ItemList/ItemList.js"
-import {productos} from "../assets/productos/productos.js"
-import { ProductLoader } from "../assets/producti/ProductLoader"
-import ItemCount from "../ItemCount/ItemCount.js"
+import ItemDetail from "../ItemDetail/ItemDetail"
+import { productos } from "../../../assets/productos/productos"
+import { SkeletonCard } from "../../../assets/productos/ProductLoader"
 
-const ItemListContainer = ({ greeting }) => {
 
-    const [items, setItems] = useState([])
-    const [loading, setLoading] = useState(true)
-    const { category } = useParams()
+const ItemDetailContainer = () => {
+
+  const [item, setItem] = useState({})
+  const [loading, setLoading] = useState(true)
+  const {id} = useParams()
+
+  
   
     useEffect(() => {
   
-      setLoading(true)
+      setLoading(true)  
+  
+    
   
       new Promise((res, rej) => {
         setTimeout(() => {
-          res(category ? productos.filter((producto)=>{
-            
-            return producto.category == category
-  
-          }) : productos)
+          res(productos.find(productos => productos.id  === id))
         }, 2000)
       })
-        .then(resultado => {
-          setItems(resultado)
+        .then(respuesta => {
           setLoading(false)
-        })
-        .catch(() => {
-          
+          setItem(respuesta)
         })
   
-    }, [category])
-  
+    },[id])
   
   
     return (
       <>
-        {loading ? <ProductLoader /> : <ItemList items={items} />}
+        {loading? <SkeletonCard/> : <ItemDetail item={item} />}
       </>
     )
-  }
-export default ItemDetailContainer
+  }  
+
+  export default ItemDetailContainer

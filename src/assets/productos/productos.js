@@ -1,46 +1,54 @@
 export const productos = [
     {
-        id: 1,
-        name: 'Villa General Belgrano',
-        price: 5000,
-        stock: 3,
-        imag: "../img/vgb.png",
-        category:"localidades",
-        description: 'Ciudad de arquitectura Bavara',
+      "id": 1,
+      "title": "Villa General Belgrano",
+      "price": 5000,
+      "description": "Ciudad de arquitectura Bavara",
+      "category": "turismo",
+      "image": "../img/vgb.png",
+      "rating": {
+        "rate": 1.5,
+        "count": 70
+      }
     },
     {
-        id: 2,
-        name: 'Santa Rosa',
-        prece: 4000,
-        stock: 5,
-        imag: "../img/santa.png",
-        category:"localidades",
-        description: 'Ciudad entre rios y montañas',
-        
-        
+      "id": 2,
+      "title": "Santa Rosa",
+      "price": 4000,
+      "description": "Ciudad entre rios y montañas",
+      "category": "turismo",
+      "image": "../img/santa.png",
+        "rating": {
+        "rate": 1.2,
+        "count": 60
+      }
     },
     {
-        id: 3,
-        name: 'Los Reartes',
-        price: 3000,
-        stock: 3,
-        category:"localidades",
-        imag: "../img/losreartes.png",
-        description: 'Pueblo historico serrano',
+      "id": 3,
+      "title": "Los Reartes",
+      "price": "3000",
+      "description": "Pueblo historico serrano",
+      "category": "turismo",
+      "image": "../img/losreartes.png",
+      "rating": {
+        "rate": 1.1,
+        "count": 50
+      }
     },
     {
-        id: 4,
-        name: 'La Cumbrecita',
-        price: 7000,
-        stock: 8,
-        imag: "../img/cumbrecita.png",
-        category:"localidades",
-        description: 'Pueblo peatonal',
-        
-        
+      "id": 4,
+      "title": "La Cumbrecita",
+      "price": 7000,
+      "description": "Pueblo peatonal",
+      "category": "turismo",
+      "image": "../img/cumbrecita.png",
+      "rating": {
+        "rate": 1.5,
+        "count": 60
+      }
     }
-]
-
+    
+  ]
 
 
 

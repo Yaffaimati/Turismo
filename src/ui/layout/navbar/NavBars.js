@@ -1,13 +1,11 @@
-import {Link,NavBarsLink} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 
 const NavBars = ({ inHeader, laClase }) => {
 
   return (
     <nav className={laClase}>
-      <NavBarsLink to="/cartwidget">cartwidget</NavBarsLink>
-      <NavBarsLink to={inHeader ? "/categoria/jewelery" : "http://facebook.com"}>{inHeader ? "jewelery" : "facebook"}</NavBarsLink>
-      <NavBarsLink to="/categoria/electronics">{inHeader ? "electronics" : "instagram"}</NavBarsLink>
-      <NavBarsLink to="/categoria/clothing">{inHeader ? "clothing" : "linkedin"}</NavBarsLink>
+      <NavLink to="/cartwidget">cartwidget</NavLink>
+      <NavLink to="/categoria/turismo">{inHeader ? "turismo" : "VGb"}</NavLink>
     </nav>
   )
 }

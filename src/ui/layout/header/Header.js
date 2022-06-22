@@ -1,15 +1,15 @@
-import Nav from "./Nav"
+import NavBars from "../navbar/NavBars"
 import { Link } from "react-router-dom"
 
 const Header = () => {
   return (
     <header className="main-header">
       <Link to="/">
-        <h1>MercoderLibre</h1>
+        <h1>Turismo </h1>
       </Link>
-      <Nav
+      <NavBars
         inHeader={true}
-        laClase="navbar-header"
+        laClase="navBars-header"
       />
     </header>
   )

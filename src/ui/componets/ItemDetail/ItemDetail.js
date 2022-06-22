@@ -14,8 +14,8 @@ const ItemDetail = ({ item }) => {
         <p>Precio : ${item.price}</p>
         {}
         <ItemCount initial={1} onAdd={onAdd} stock={5}/>
-        <button>terminar mi compra</button>
+        <button>terminar mi reserva</button>
       </div>
     )
   }
-export default ItemDetail;
+export default ItemDetail
